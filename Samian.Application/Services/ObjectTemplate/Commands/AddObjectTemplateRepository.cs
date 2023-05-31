@@ -7,7 +7,7 @@ namespace SamianSoft.Application.Services.ObjectTemplate.Commands
 {
     public class AddObjectTemplateRepository : IAddObjectTemplateRepository
     {
-        #region Constructor
+        #region Constructor and properties
         private readonly IMapper _mapper;
         private readonly ISF_DbContext _sf_DbContext;
         public AddObjectTemplateRepository(ISF_DbContext sf_DbContext,
