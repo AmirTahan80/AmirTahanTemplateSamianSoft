@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SamianSoft.Domain.Entity;
 using SamianSoft.Persistence.Data;
+using SamianSoft.XUnittest.Extentions;
 using Xunit;
 
 namespace SamianSoft.XUnittest.DataBaseTests
@@ -8,13 +9,11 @@ namespace SamianSoft.XUnittest.DataBaseTests
     public class DataTest
     {
         #region Consturcotr and properties and variables
-        DbContextOptions<SFDbContext> options;
+        private readonly DbContextOptions<SFDbContext> _options;
 
         public DataTest()
         {
-            options = new DbContextOptionsBuilder<SFDbContext>()
-            .UseInMemoryDatabase(databaseName: "MyTestDatabase")
-            .Options;
+            _options = CreateDataBaseInstanceHelper.CreateDbContextOption();
         }
         #endregion
 
@@ -22,7 +21,8 @@ namespace SamianSoft.XUnittest.DataBaseTests
         [Fact]
         public async void DataBase_UseInMemoryDataBaseAndAddSomeData_ReturnACountOfData()
         {
-            using(var context = new SFDbContext(options)) {
+            using (var context = new SFDbContext(_options))
+            {
                 await context.AddAsync<ObjectTemplate>(
                     new ObjectTemplate()
                     {
@@ -93,8 +93,8 @@ namespace SamianSoft.XUnittest.DataBaseTests
                     );
                 await context.SaveChangesAsync();
             }
-        
-            using(var context = new SFDbContext(options))
+
+            using (var context = new SFDbContext(_options))
             {
                 var listOfObjects = new List<ObjectTemplate>();
                 listOfObjects = await context.ObjectTemplates.ToListAsync();
