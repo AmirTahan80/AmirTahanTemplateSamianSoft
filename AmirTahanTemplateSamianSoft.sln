@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmirTahanTemplateSamianSoft", "AmirTahanTemplateSamianSoft\AmirTahanTemplateSamianSoft.csproj", "{D80C8F2B-4CEB-435B-B3AF-7D04548F8A50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmirTahanTemplateSamianSoft", "AmirTahanTemplateSamianSoft\AmirTahanTemplateSamianSoft.csproj", "{D80C8F2B-4CEB-435B-B3AF-7D04548F8A50}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E5A4F2FB-1AFD-43C4-95C4-E258CC81F6CB}"
 EndProject
@@ -17,7 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{313AFE47-D742-41F1-86F7-E29844CBB226}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamianSoft.Domain", "SamianSoft.Domain\SamianSoft.Domain.csproj", "{64188844-2613-464E-BC89-B1DEA967CCF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamianSoft.Domain", "SamianSoft.Domain\SamianSoft.Domain.csproj", "{64188844-2613-464E-BC89-B1DEA967CCF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamianSoft.Persistence", "Persistence\SamianSoft.Persistence.csproj", "{C7F4D11C-E807-4A66-A81C-F25B76A19C9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamianSoft.Application", "Samian.Application\SamianSoft.Application.csproj", "{BA40B5FA-901D-42B0-87D6-2AE8AA565BFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{64188844-2613-464E-BC89-B1DEA967CCF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64188844-2613-464E-BC89-B1DEA967CCF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64188844-2613-464E-BC89-B1DEA967CCF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F4D11C-E807-4A66-A81C-F25B76A19C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F4D11C-E807-4A66-A81C-F25B76A19C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F4D11C-E807-4A66-A81C-F25B76A19C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F4D11C-E807-4A66-A81C-F25B76A19C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA40B5FA-901D-42B0-87D6-2AE8AA565BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA40B5FA-901D-42B0-87D6-2AE8AA565BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA40B5FA-901D-42B0-87D6-2AE8AA565BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA40B5FA-901D-42B0-87D6-2AE8AA565BFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +56,8 @@ Global
 		{576D796E-BFE6-4371-ABEE-306B9B9067A6} = {AB0585B2-AE92-4852-A7F5-0EB8D0E9C8CF}
 		{313AFE47-D742-41F1-86F7-E29844CBB226} = {AB0585B2-AE92-4852-A7F5-0EB8D0E9C8CF}
 		{64188844-2613-464E-BC89-B1DEA967CCF2} = {313AFE47-D742-41F1-86F7-E29844CBB226}
+		{C7F4D11C-E807-4A66-A81C-F25B76A19C9E} = {576D796E-BFE6-4371-ABEE-306B9B9067A6}
+		{BA40B5FA-901D-42B0-87D6-2AE8AA565BFC} = {A1E1EF6F-9A88-4B2F-B32A-4918C702C88E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35FBDCBB-466E-474D-935D-BEE3F20B276E}
