@@ -7,13 +7,21 @@ namespace SamianSoft.XUnittest.DataBaseTests
 {
     public class DataTest
     {
+        #region Consturcotr and properties and variables
+        DbContextOptions<SFDbContext> options;
+
+        public DataTest()
+        {
+            options = new DbContextOptionsBuilder<SFDbContext>()
+            .UseInMemoryDatabase(databaseName: "MyTestDatabase")
+            .Options;
+        }
+        #endregion
+
+        #region Test Methods
         [Fact]
         public async void DataBase_UseInMemoryDataBaseAndAddSomeData_ReturnACountOfData()
         {
-            var options = new DbContextOptionsBuilder<SFDbContext>()
-            .UseInMemoryDatabase(databaseName: "MyTestDatabase")
-            .Options;
-
             using(var context = new SFDbContext(options)) {
                 await context.AddAsync<ObjectTemplate>(
                     new ObjectTemplate()
@@ -93,5 +101,6 @@ namespace SamianSoft.XUnittest.DataBaseTests
                 Assert.Equal(4, listOfObjects.Count);
             }
         }
+        #endregion
     }
 }
