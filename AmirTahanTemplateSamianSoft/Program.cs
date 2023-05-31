@@ -1,4 +1,6 @@
 
+using SamianSoft.Persistence.Data;
+
 namespace AmirTahanTemplateSamianSoft
 {
     public class Program
@@ -10,6 +12,7 @@ namespace AmirTahanTemplateSamianSoft
             // Add services to the container.
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddControllers();
+            builder.Services.AddDbContext<SFDbContext>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
