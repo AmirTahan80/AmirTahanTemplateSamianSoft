@@ -39,7 +39,8 @@ namespace SamianSoft.Application.Services.ObjectTemplate.Commands
                     {
                         Data = objectCreated,
                         Message = "Faield to save the object template",
-                        StatusCode = HttpStatusCode.BadRequest
+                        StatusCode = HttpStatusCode.BadRequest,
+                        IsSuccess = false
                     };
             }
             catch (Exception ex)
@@ -49,7 +50,8 @@ namespace SamianSoft.Application.Services.ObjectTemplate.Commands
                 {
                     Data = ex,
                     Message = ex.Message,
-                    StatusCode = 500
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    IsSuccess=false
                 };
             }
         }

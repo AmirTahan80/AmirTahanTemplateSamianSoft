@@ -1,10 +1,12 @@
-﻿namespace SamianSoft.Application.DTOs
+﻿using System.Net;
+
+namespace SamianSoft.Application.DTOs
 {
     public class ResultDto
     {
         public object? Data { get; set; }
-        public bool IsSuccess { get; set; } = false;
-        public int StatusCode { get; set; } = 400;
+        public required bool IsSuccess { get; set; }
+        public required HttpStatusCode StatusCode { get; set; }
         public string? Message { get; set; }
     }
 }
