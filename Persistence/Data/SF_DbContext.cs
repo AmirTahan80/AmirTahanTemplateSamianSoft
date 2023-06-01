@@ -21,10 +21,10 @@ namespace SamianSoft.Persistence.Data
         public async Task<int> SaveChangesAsync() => await base.SaveChangesAsync();
         #endregion
 
-        #region OvverRides
+        #region Ovverrides
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-AF7P9D7;Database=SamianSoftTemplate;Trusted_Connection=True;TrustServerCertificate=True;");
+            //optionsBuilder.UseSqlServer("Server=DESKTOP-AF7P9D7;Database=SamianSoftTemplate;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

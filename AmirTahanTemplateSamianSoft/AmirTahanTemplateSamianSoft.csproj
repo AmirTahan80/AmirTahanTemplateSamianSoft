@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Persistence\SamianSoft.Persistence.csproj" />
+    <ProjectReference Include="..\Samian.Application\SamianSoft.Application.csproj" />
   </ItemGroup>
 
 </Project>
