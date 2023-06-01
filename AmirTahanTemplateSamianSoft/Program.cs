@@ -1,4 +1,5 @@
 
+using SamianSoft.Application.Services.ObjectTemplate.Commands;
 using SamianSoft.Persistence.Data;
 
 namespace AmirTahanTemplateSamianSoft
@@ -13,6 +14,11 @@ namespace AmirTahanTemplateSamianSoft
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddControllers();
             builder.Services.AddDbContext<SFDbContext>();
+
+            #region Injections
+            builder.Services.AddScoped<IAddObjectTemplateRepository, AddObjectTemplateRepository>();
+            #endregion
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
