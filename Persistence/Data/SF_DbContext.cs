@@ -24,7 +24,7 @@ namespace SamianSoft.Persistence.Data
         #region Ovverrides
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("Server=DESKTOP-AF7P9D7;Database=SamianSoftTemplate;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-AF7P9D7;Database=SamianSoftTemplate;Trusted_Connection=True;TrustServerCertificate=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

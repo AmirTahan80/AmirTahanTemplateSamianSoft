@@ -1,4 +1,5 @@
 using SamianSoft.Application.Services.ObjectTemplate.Commands;
+using SamianSoft.Domain.DataInterface;
 using SamianSoft.Persistence.Data;
 
 namespace AmirTahanTemplateSamianSoft
@@ -11,7 +12,7 @@ namespace AmirTahanTemplateSamianSoft
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddControllers();
             #region AddDbContext
-            builder.Services.AddDbContext<SFDbContext>();
+            builder.Services.AddDbContext<ISF_DbContext,SFDbContext>();
             #endregion
             #region Injections
             builder.Services.AddScoped<IAddObjectTemplateRepository, AddObjectTemplateRepository>();

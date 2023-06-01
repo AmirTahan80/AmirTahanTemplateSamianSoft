@@ -16,7 +16,7 @@ namespace AmirTahanTemplateSamianSoft.Controllers
         [HttpPost("Save")]
         public async Task<IActionResult> Save(ObjectTemplateDto objectTemplate)
         {
-            if (objectTemplate == null)
+            if (objectTemplate is null)
                 return BadRequest("Object required.");
 
             return ReturnJsonResult(await _addObjectTemplate.Execute(objectTemplate));
