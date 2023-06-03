@@ -26,5 +26,7 @@ namespace SamianSoft.Domain.Entity
         public string XClientName { get; set; }                         
         [Required]
         public string ApiVersion { get; set; }
+
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
     }
 }

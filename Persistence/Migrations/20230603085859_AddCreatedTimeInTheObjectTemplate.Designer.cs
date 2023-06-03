@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SamianSoft.Persistence.Data;
 
@@ -11,9 +12,11 @@ using SamianSoft.Persistence.Data;
 namespace SamianSoft.Persistence.Migrations
 {
     [DbContext(typeof(SFDbContext))]
-    partial class SFDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230603085859_AddCreatedTimeInTheObjectTemplate")]
+    partial class AddCreatedTimeInTheObjectTemplate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

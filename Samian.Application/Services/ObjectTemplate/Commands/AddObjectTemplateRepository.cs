@@ -25,23 +25,14 @@ namespace SamianSoft.Application.Services.ObjectTemplate.Commands
             { 
                 var createObject = _mapper.Map<Domain.Entity.ObjectTemplate>(objectTemplateDto);
                 var objectCreated = await _sf_DbContext.ObjectTemplates.AddAsync(createObject);
-                var res = await _sf_DbContext.SaveChangesAsync();
-                if (res > 0)
-                    return new()
-                    {
-                        Data = createObject,
-                        IsSuccess = true,
-                        Message = "Success To create a object",
-                        StatusCode = HttpStatusCode.OK
-                    };
-                else
-                    return new()
-                    {
-                        Data = createObject,
-                        Message = "Faield to save the object template",
-                        StatusCode = HttpStatusCode.BadRequest,
-                        IsSuccess = false
-                    };
+                _sf_DbContext.SaveChangesAsync();
+                return new()
+                {
+                    Data = createObject,
+                    IsSuccess = true,
+                    Message = "Success To create a object",
+                    StatusCode = HttpStatusCode.OK
+                };
             }
             catch (Exception ex)
             {

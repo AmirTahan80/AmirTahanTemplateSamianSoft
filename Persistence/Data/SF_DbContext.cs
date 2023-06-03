@@ -18,7 +18,7 @@ namespace SamianSoft.Persistence.Data
         #endregion
 
         #region Methods
-        public async Task<int> SaveChangesAsync() => await base.SaveChangesAsync();
+        public Task<int> SaveChangesAsync() => base.SaveChangesAsync();
         #endregion
 
         #region Ovverrides
