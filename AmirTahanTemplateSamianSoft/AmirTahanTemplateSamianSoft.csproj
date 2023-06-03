@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Elastic.Clients.Elasticsearch" Version="8.1.1" />
     <PackageReference Include="Elasticsearch.Net" Version="7.17.5" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
@@ -15,6 +16,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.5" />
+    <PackageReference Include="NEST" Version="7.17.5" />
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
@@ -22,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Persistence\SamianSoft.Persistence.csproj" />
     <ProjectReference Include="..\Samian.Application\SamianSoft.Application.csproj" />
+    <ProjectReference Include="..\SamianSoft.Infrastructure\SamianSoft.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

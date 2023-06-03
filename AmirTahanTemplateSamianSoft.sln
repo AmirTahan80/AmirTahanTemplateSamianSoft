@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamianSoft.Domain", "Samian
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamianSoft.Persistence", "Persistence\SamianSoft.Persistence.csproj", "{C7F4D11C-E807-4A66-A81C-F25B76A19C9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamianSoft.Application", "Samian.Application\SamianSoft.Application.csproj", "{BA40B5FA-901D-42B0-87D6-2AE8AA565BFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamianSoft.Application", "Samian.Application\SamianSoft.Application.csproj", "{BA40B5FA-901D-42B0-87D6-2AE8AA565BFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamianSoft.XUnittest", "SamianSoft.XUnittest\SamianSoft.XUnittest.csproj", "{13B60B86-9D2F-40D5-80D3-560881BF0B7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamianSoft.XUnittest", "SamianSoft.XUnittest\SamianSoft.XUnittest.csproj", "{13B60B86-9D2F-40D5-80D3-560881BF0B7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamianSoft.Infrastructure", "SamianSoft.Infrastructure\SamianSoft.Infrastructure.csproj", "{A3F3366A-0A6E-4DE9-80DF-D6679158C2E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{13B60B86-9D2F-40D5-80D3-560881BF0B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13B60B86-9D2F-40D5-80D3-560881BF0B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13B60B86-9D2F-40D5-80D3-560881BF0B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F3366A-0A6E-4DE9-80DF-D6679158C2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F3366A-0A6E-4DE9-80DF-D6679158C2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F3366A-0A6E-4DE9-80DF-D6679158C2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F3366A-0A6E-4DE9-80DF-D6679158C2E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{C7F4D11C-E807-4A66-A81C-F25B76A19C9E} = {576D796E-BFE6-4371-ABEE-306B9B9067A6}
 		{BA40B5FA-901D-42B0-87D6-2AE8AA565BFC} = {A1E1EF6F-9A88-4B2F-B32A-4918C702C88E}
 		{13B60B86-9D2F-40D5-80D3-560881BF0B7C} = {E5A4F2FB-1AFD-43C4-95C4-E258CC81F6CB}
+		{A3F3366A-0A6E-4DE9-80DF-D6679158C2E4} = {576D796E-BFE6-4371-ABEE-306B9B9067A6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35FBDCBB-466E-474D-935D-BEE3F20B276E}

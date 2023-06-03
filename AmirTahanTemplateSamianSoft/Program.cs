@@ -1,6 +1,10 @@
+using Elasticsearch.Net;
+using Nest;
 using SamianSoft.Application.Services.ObjectTemplate.Commands;
 using SamianSoft.Domain.DataInterface;
+using SamianSoft.Infrastructure.Elasticsearch;
 using SamianSoft.Persistence.Data;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace AmirTahanTemplateSamianSoft
 {
@@ -15,7 +19,14 @@ namespace AmirTahanTemplateSamianSoft
             #endregion
             #region Injections
             builder.Services.AddScoped<IAddObjectTemplateRepository, AddObjectTemplateRepository>();
+            builder.Services.AddScoped<IElasticsearchSetup, ElasticsearchSetup>();
             #endregion
+
+            //var pool = new SingleNodeConnectionPool(new Uri("http://localhost:9200"));
+            //var settings = new ConnectionSettings(pool)
+            //    .DefaultIndex("ObjectTemplate");
+            //var client = new ElasticClient(settings);
+            //builder.Services.AddSingleton(client);
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
