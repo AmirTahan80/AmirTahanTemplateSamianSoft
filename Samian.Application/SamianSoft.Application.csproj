@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="MiddleWare\" />
     <Folder Include="Services\ObjectTemplate\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Elasticsearch.Net" Version="7.17.5" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
