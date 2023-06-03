@@ -5,7 +5,7 @@
 namespace SamianSoft.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class initDatabase : Migration
+    public partial class initDataBase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

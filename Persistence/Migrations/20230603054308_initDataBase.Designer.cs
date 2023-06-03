@@ -11,8 +11,8 @@ using SamianSoft.Persistence.Data;
 namespace SamianSoft.Persistence.Migrations
 {
     [DbContext(typeof(SFDbContext))]
-    [Migration("20230531115548_initDatabase")]
-    partial class initDatabase
+    [Migration("20230603054308_initDataBase")]
+    partial class initDataBase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -9,7 +9,6 @@ namespace AmirTahanTemplateSamianSoft
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.AddControllers();
             #region AddDbContext
             builder.Services.AddDbContext<ISF_DbContext,SFDbContext>();
@@ -19,6 +18,7 @@ namespace AmirTahanTemplateSamianSoft
             #endregion
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             var app = builder.Build();
             if (app.Environment.IsDevelopment())
             {

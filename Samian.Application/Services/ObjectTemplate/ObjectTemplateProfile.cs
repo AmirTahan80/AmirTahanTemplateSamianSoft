@@ -8,7 +8,7 @@ namespace SamianSoft.Application.Services.ObjectTemplate
         public ObjectTemplateProfile()
         {
             CreateMap<ObjectTemplateDto, Domain.Entity.ObjectTemplate>();
-            //CreateMap<Domain.Entity.ObjectTemplate, ObjectTemplateDto>();
+            CreateMap<Domain.Entity.ObjectTemplate, ObjectTemplateDto>();
         }
     }
 }
