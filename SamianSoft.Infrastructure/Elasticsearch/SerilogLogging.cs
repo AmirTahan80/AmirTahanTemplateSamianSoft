@@ -1,5 +1,6 @@
-﻿using System.Reflection;
-
+﻿using System.Diagnostics;
+using System.Reflection;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Serilog;
 using Serilog.Sinks.Elasticsearch;
 
@@ -19,7 +20,7 @@ namespace SamianSoft.Infrastructure.Elasticsearch
             var logBuilder = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(
-                    new Uri("http://10.0.2.168:9200/"))
+                    new Uri("http://10.0.2.168:9200"))
                 {
                     AutoRegisterTemplate = true,
                     IndexFormat = $"{Assembly.GetExecutingAssembly()
@@ -28,6 +29,9 @@ namespace SamianSoft.Infrastructure.Elasticsearch
                 //.Enrich.WithProperty("Environment", environment)
                 //.ReadFrom.Configuration(configuration)
                 .CreateLogger();
+            Serilog.Debugging.SelfLog.Enable(msg => Debug.Write(obj));
+            Serilog.Debugging.SelfLog.Enable(Console.Error);
+
             logBuilder.Write(Serilog.Events.LogEventLevel.Information,
                 obj);
             return Task.CompletedTask;

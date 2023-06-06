@@ -20,7 +20,7 @@ namespace AmirTahanTemplateSamianSoft
             #endregion
             #region Injections
             builder.Services.AddScoped<IAddObjectTemplateRepository, AddObjectTemplateRepository>();
-            //builder.Services.AddScoped<IElasticsearchSetup, ElasticsearchSetup>();
+            builder.Services.AddScoped<IElasticsearchSetup, ElasticsearchSetup>();
             builder.Services.AddScoped<ISerilogLogginSettup,SerilogLogging>();
             #endregion
 

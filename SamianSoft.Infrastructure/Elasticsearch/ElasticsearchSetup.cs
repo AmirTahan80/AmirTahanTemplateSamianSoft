@@ -1,5 +1,6 @@
 ﻿using Elastic.Clients.Elasticsearch;
 using Elastic.Transport;
+using Nest;
 using SamianSoft.Application.DTOs;
 
 namespace SamianSoft.Infrastructure.Elasticsearch
@@ -11,13 +12,19 @@ namespace SamianSoft.Infrastructure.Elasticsearch
     public class ElasticsearchSetup: IElasticsearchSetup
     {
         #region Properties and contructors
-        private readonly ElasticsearchClient _client;
+        private readonly ElasticClient _client;
         public ElasticsearchSetup()
         {
-            var settings = new ElasticsearchClientSettings(new Uri("http://10.0.2.168:9200/"))
-                .DefaultIndex("ObjectTemplate")
-            .Authentication(new BasicAuthentication("elastic", "Ar7uqhTCc+Vm9zT=Tjhg"));
-            _client = new ElasticsearchClient(settings);
+            //var settings = new ElasticsearchClientSettings(new Uri("http://10.0.2.168:9200"))
+            //    .DefaultIndex("ObjectTemplate")
+            //.Authentication(new BasicAuthentication("elastic", "tQ8uI8uACpf8iItgaaKg"));
+            //settings.EnableApiVersioningHeader();
+            //_client = new ElasticsearchClient(settings);
+            var settings = new ConnectionSettings(new Uri("http://10.0.2.168:9200"))
+                .BasicAuthentication("elastic", "tQ8uI8uACpf8iItgaaKg")
+                .DefaultIndex("Object")
+                .EnableApiVersioningHeader();
+            _client = new ElasticClient(settings);
         }
         #endregion
 
@@ -25,12 +32,9 @@ namespace SamianSoft.Infrastructure.Elasticsearch
         {
             try
             {
-                var res =await _client.IndexAsync(objectTemplate);
+                var res =await _client.IndexDocumentAsync(objectTemplate);
                 var t = res.DebugInformation;
-                var b = res.IsValidResponse;
-                var c = res.ApiCallDetails;
-                var d = res.ElasticsearchServerError;
-                if(res.IsSuccess())
+                if(res.IsValid)
                 {
                     return new()
                     {
