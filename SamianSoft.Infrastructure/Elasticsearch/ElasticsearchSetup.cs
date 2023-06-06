@@ -47,5 +47,17 @@ namespace SamianSoft.Infrastructure.Elasticsearch
                 return new() { IsSuccess = false, StatusCode = System.Net.HttpStatusCode.InternalServerError };
             }
         }
-    }
+
+ //       { "CreateUserId": 0,
+ //"RequestURL": "/v2/account/erpweb/profile/image/?userId=1105&companyId=1&dummyCounter=0",
+ //"SessionId": "5ae96609-202d-41eb-aaa6-4724ba3e71c5",
+ //"ClientIP": "127.0.0.1",
+ //"RequestId": "0HMMBKPFPNMU6:00000002",
+ //"HttpMethod": "POST",
+ //"Host": "http://localhost:8086",
+ //"Agent": "PostmanRuntime/7.29.2",
+ //"XClientVersion": "4.18.1Rc",
+ //"XClientName": "SamianSoft",
+ //"ApiVersion": "2.18.0-b.2" }
+}
 }
