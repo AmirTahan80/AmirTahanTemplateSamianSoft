@@ -10,6 +10,7 @@ namespace AmirTahanTemplateSamianSoft
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            ConfigurationManager configuration = builder.Configuration;
             builder.Services.AddControllers();
             #region AddDbContext
             builder.Services.AddDbContext<ISF_DbContext, SFDbContext>();
@@ -22,6 +23,7 @@ namespace AmirTahanTemplateSamianSoft
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            builder.Services.AddStackExchangeRedisCache(options => { options.Configuration = configuration["RedisCacheUrl"]; });
             var app = builder.Build();
             if (app.Environment.IsDevelopment())
             {
